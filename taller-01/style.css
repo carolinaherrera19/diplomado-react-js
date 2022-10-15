@@ -2,6 +2,7 @@
 
 body {
   font-family: "Fuzzy Bubbles", cursive;
+  margin: 0;
 }
 .contenedor {
   width: 1024px;
@@ -9,6 +10,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin: auto;
+  padding-top: 100px;
 }
 
 .respuestas {
@@ -17,4 +19,35 @@ body {
 
 ul {
   list-style-type: decimal;
+}
+
+ul.principal {
+  list-style-type: disc;
+}
+
+img {
+  max-height: 400px;
+}
+
+.menu {
+  background: black;
+  position: fixed;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-menu li {
+  padding: 5px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
 }
