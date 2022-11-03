@@ -1,6 +1,5 @@
-function saludoPorHorario() {
-    // const hora = new Date().getHours();
-    const hora = 10
+/* function saludoPorHorario() {
+    const hora = new Date().getHours();
     if (hora >= 6 && hora <= 12) {
         console.log("Hola Buenos dias")
     } else if (hora >= 12 && hora <= 18) {
@@ -11,4 +10,5 @@ function saludoPorHorario() {
         console.log("Es muy tarde deberias estar durmiendo")
     }
 }
-saludoPorHorario()
+saludoPorHorario() */
+
