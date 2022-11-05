@@ -1,10 +1,12 @@
 const tablas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 tablas.forEach(row => {
     const id = 'boton-' + row
+    const idBotonOcultar = 'boton-ocultar-' + row
     const encabezadoId = 'encabezado-' + row
     const cuerpoId = 'cuerpo-' + row
-    const botton = document.getElementById(id)
-    botton.addEventListener('click', () => {
+    const boton = document.getElementById(id)
+    const botonOcultar = document.getElementById(idBotonOcultar)
+    boton.addEventListener('click', () => {
         const trEncabezados = document.createElement('tr')
         const thOperacion = document.createElement('th')
         thOperacion.innerText = 'Multiplicacion'
@@ -23,6 +25,19 @@ tablas.forEach(row => {
             trResultados.appendChild(rResultado)
             document.getElementById(cuerpoId).appendChild(trResultados)
         })
-        botton.setAttribute('disabled', true)
+        botonOcultar.removeAttribute('disabled')
+        boton.setAttribute('disabled', true)
+    })
+    botonOcultar.addEventListener('click', () => {
+        const encabezados = document.getElementById(encabezadoId)
+        while (encabezados.lastElementChild) {
+            encabezados.removeChild(encabezados.lastElementChild);
+        }
+        const detalles = document.getElementById(cuerpoId)
+        while (detalles.lastElementChild) {
+            detalles.removeChild(detalles.lastElementChild);
+        }
+        botonOcultar.setAttribute('disabled', true)
+        boton.removeAttribute('disabled')
     })
 })
