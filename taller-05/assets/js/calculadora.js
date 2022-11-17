@@ -1,19 +1,22 @@
 function validarNota(event) {
+    const element = document.getElementById(event.target.id)
     let value = +event.target.value
     if (value > 5) {
         value = 5
-    } else if (value >= 3 && value <= 5) {
-        document.getElementById(event.target.id).classList.remove('is-invalid')
-        document.getElementById(event.target.id).classList.add('is-valid')
+        element.value = value
+    }
+    if (value >= 3 && value <= 5) {
+        element.classList.remove('is-invalid')
+        element.classList.add('is-valid')
     } else {
-        document.getElementById(event.target.id).classList.add('is-invalid')
-        document.getElementById(event.target.id).classList.remove('is-valid')
+        element.classList.remove('is-valid')
+        element.classList.add('is-invalid')
     }
     return value
 }
 
-function calcularPonderado(nota, valorPorNota) {
-    return (nota * valorPorNota) / 100
+function calcularPonderado(nota, porcentajePorNota) {
+    return (nota * porcentajePorNota) / 100
 }
 
 function agregarPonderadoPorLaboratorio(id, nota) {
@@ -23,14 +26,14 @@ function agregarPonderadoPorLaboratorio(id, nota) {
     idsPracticas.forEach(consecutivo => {
         notaPractica += +document.getElementById(`resultado-lab-${consecutivo}`).innerHTML
     })
-    document.getElementById('nota-practica').innerText = calcularPonderado((notaPractica / 8), 80)
+    document.getElementById('nota-practica').innerText = calcularPonderado((notaPractica / 8), 80).toFixed(2)
 }
 
 
 function calculadora() {
     const idsPracticas = [1, 2, 3, 4, 5, 6, 7, 8]
     idsPracticas.forEach(id => {
-        const prePreInformeInputId = `lab-pre-informe-${id}`
+        const prePreInformeInputId = `lab-pre-informe-${id}` // 'lab-pre-informe-' + id
         const preLaboratorioInputId = `lab-laboratorio-${id}`
         const preInformeInputId = `lab-informe-${id}`
         const resultadoPorLaboratorioId = `resultado-lab-${id}`
