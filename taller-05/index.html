@@ -8,19 +8,27 @@
     <title>Calculadora de Notas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row text-center mt-4">
+            <h1>Nota Final</h1>
+            <div id="nota-final" class="alert alert-danger" role="alert">
+                0
+            </div>
+        </div>
+        <div class="row mt-2">
             <div class="col-12">
-                <h3>Notas Teoricas</h3>
+                <h3>Teorico (80%)<span id="nota-teorica" class="ms-1 badge text-bg-danger">0</span></h3>
                 <div class="row">
                     <div class="col-12 col-sm-6">
                         <div class="row mb-3">
                             <label for="examen-1" class="col-sm-6 col-form-label">Examen 1</label>
                             <div class="col-sm-6">
-                                <input type="text" name="examen-1" id="examen-1" value="0" class="form-control">
+                                <input type="text" name="examen-1" id="examen-1" value="0"
+                                    class="form-control is-invalid" onchange="onChangeElementosNotasTeoricas()">
                             </div>
                         </div>
                     </div>
@@ -28,7 +36,8 @@
                         <div class="row mb-3">
                             <label for="examen-2" class="col-sm-6 col-form-label">Examen 2</label>
                             <div class="col-sm-6">
-                                <input type="text" name="examen-2" id="examen-2" value="0" class="form-control">
+                                <input type="text" name="examen-2" id="examen-2" value="0"
+                                    class="form-control is-invalid" onchange="onChangeElementosNotasTeoricas()">
                             </div>
                         </div>
                     </div>
@@ -36,7 +45,8 @@
                         <div class="row mb-3">
                             <label for="examen-3" class="col-sm-6 col-form-label">Examen 3</label>
                             <div class="col-sm-6">
-                                <input type="text" name="examen-3" id="examen-3" value="0" class="form-control">
+                                <input type="text" name="examen-3" id="examen-3" value="0"
+                                    class="form-control is-invalid" onchange="onChangeElementosNotasTeoricas()">
                             </div>
                         </div>
                     </div>
@@ -44,7 +54,8 @@
                         <div class="row mb-3">
                             <label for="quices" class="col-sm-6 col-form-label">Quices</label>
                             <div class="col-sm-6">
-                                <input type="text" name="quices" id="quices" value="0" class="form-control">
+                                <input type="text" name="quices" id="quices" value="0" class="form-control is-invalid"
+                                    onchange="onChangeElementosNotasTeoricas()">
                             </div>
                         </div>
                     </div>
@@ -52,7 +63,8 @@
                         <div class="row mb-3">
                             <label for="asistencia" class="col-sm-6 col-form-label">Asistencia</label>
                             <div class="col-sm-6">
-                                <input type="text" name="asistencia" id="asistencia" value="0" class="form-control">
+                                <input type="text" name="asistencia" id="asistencia" value="0"
+                                    class="form-control is-invalid" onchange="onChangeElementosNotasTeoricas()">
                             </div>
                         </div>
                     </div>
@@ -60,8 +72,8 @@
                         <div class="row mb-3">
                             <label for="Proyecto Final" class="col-sm-6 col-form-label">Proyecto Final</label>
                             <div class="col-sm-6">
-                                <input type="text" name="Proyecto Final" id="Proyecto Final" value="0"
-                                    class="form-control is-invalid">
+                                <input type="text" name="Proyecto Final" id="proyecto-final" value="0"
+                                    class="form-control is-invalid" onchange="onChangeElementosNotasTeoricas()">
                             </div>
                         </div>
                     </div>
@@ -69,15 +81,31 @@
             </div>
             <div class="col-12">
                 <div class="row">
-                    <h3>Notas Practicas</h3>
-                    <span id="nota-practica">0</span>
+                    <h3>Practico (20%)<span id="nota-practica" class="ms-1 badge text-bg-danger">0</span></h3>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <label for="examen-final" class="col-sm-8 col-form-label col-md-7">Examen Final (20%)</label>
+                        <div class="col-sm-4 col-md-5">
+                            <input type="text" value="0" name="examen-final" id="examen-final"
+                                class="form-control is-invalid">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label for="resultado-laboratorios" class="col-sm-8 col-form-label col-md-7">Laboratorios
+                            (80%)</label>
+                        <div class="col-sm-4 col-md-5">
+                            <input type="text" value="0" name="resultado-laboratorios" id="resultado-laboratorios"
+                                class="form-control is-invalid" disabled>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="border-bottom col-12 col-lg-3 col-md-4 col-sm-6 mb-2 pb-1">
                         <div class="row">
                             <p class="mt-2 lead">
                                 Laboratorio 1
-                                <span id="resultado-lab-1" class="ms-1 badge text-bg-primary">0</span>
+                                <span id="resultado-lab-1" class="ms-1 badge text-bg-danger">0</span>
                             </p>
                         </div>
                         <div class="row mb-1">
@@ -106,7 +134,7 @@
                         <div class="row">
                             <p class="mt-2 lead">
                                 Laboratorio 2
-                                <span id="resultado-lab-2" class="ms-1 badge text-bg-primary">0</span>
+                                <span id="resultado-lab-2" class="ms-1 badge text-bg-danger">0</span>
                             </p>
                         </div>
                         <div class="row mb-1">
@@ -135,7 +163,7 @@
                         <div class="row">
                             <p class="mt-2 lead">
                                 Laboratorio 3
-                                <span id="resultado-lab-3" class="ms-1 badge text-bg-primary">0</span>
+                                <span id="resultado-lab-3" class="ms-1 badge text-bg-danger">0</span>
                             </p>
                         </div>
                         <div class="row mb-1">
@@ -164,7 +192,7 @@
                         <div class="row">
                             <p class="mt-2 lead">
                                 Laboratorio 4
-                                <span id="resultado-lab-4" class="ms-1 badge text-bg-primary">0</span>
+                                <span id="resultado-lab-4" class="ms-1 badge text-bg-danger">0</span>
                             </p>
                         </div>
                         <div class="row mb-1">
@@ -193,7 +221,7 @@
                         <div class="row">
                             <p class="mt-2 lead">
                                 Laboratorio 5
-                                <span id="resultado-lab-5" class="ms-1 badge text-bg-primary">0</span>
+                                <span id="resultado-lab-5" class="ms-1 badge text-bg-danger">0</span>
                             </p>
                         </div>
                         <div class="row mb-1">
@@ -222,7 +250,7 @@
                         <div class="row">
                             <p class="mt-2 lead">
                                 Laboratorio 6
-                                <span id="resultado-lab-6" class="ms-1 badge text-bg-primary">0</span>
+                                <span id="resultado-lab-6" class="ms-1 badge text-bg-danger">0</span>
                             </p>
                         </div>
                         <div class="row mb-1">
@@ -251,7 +279,7 @@
                         <div class="row">
                             <p class="mt-2 lead">
                                 Laboratorio 7
-                                <span id="resultado-lab-7" class="ms-1 badge text-bg-primary">0</span>
+                                <span id="resultado-lab-7" class="ms-1 badge text-bg-danger">0</span>
                             </p>
                         </div>
                         <div class="row mb-1">
@@ -280,7 +308,7 @@
                         <div class="row">
                             <p class="mt-2 lead">
                                 Laboratorio 8
-                                <span id="resultado-lab-8" class="ms-1 badge text-bg-primary">0</span>
+                                <span id="resultado-lab-8" class="ms-1 badge text-bg-danger">0</span>
                             </p>
                         </div>
                         <div class="row mb-1">
