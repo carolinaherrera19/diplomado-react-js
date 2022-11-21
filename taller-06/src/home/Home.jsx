@@ -18,7 +18,7 @@ function Home() {
           title="Ejericio 02"
           text="Recetas Navidenas"
           textButton="Ver..."
-          path="/ejercicio-01"
+          path="/ejercicio-02"
           urlImage="https://files.rcnradio.com/styles/imagen_full/public/2021-12/natilla_0.jpg.webp?VersionId=XgUyXqPSwZbLB6ZGjoPF.CfDbBC34xpM&itok=y5hj2TUH"></CardCustom>
       </Col>
       <Col sm="4">
@@ -26,7 +26,7 @@ function Home() {
           title="Ejericio 03"
           text="Canciones Navidenas"
           textButton="Ver.."
-          path="/ejercicio-01"
+          path="/ejercicio-03"
           urlImage="https://i.musicaimg.com/playlists/canciones-navidenas.jpg"></CardCustom>
       </Col>
     </>
