@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { BrowserRouter, useLocation, useRoutes, NavLink } from 'react-router-dom';
 import Home from '../home/Home';
-import Ejercicio01 from '../ejercicio-01/Ejercicio-01';
+import Ejercicio01 from '../ejercicio-01/ejercicio-01';
 import Ejercicio02 from '../ejercicio-02/Ejercicio-02';
 import Ejercicio03 from '../ejercicio-03/Ejercicio-03';
 
