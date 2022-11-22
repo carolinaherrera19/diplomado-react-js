@@ -9,7 +9,7 @@ import Ejercicio01 from '../ejercicio-01/ejercicio-01';
 import Ejercicio02 from '../ejercicio-02/Ejercicio-02';
 import Ejercicio03 from '../ejercicio-03/Ejercicio-03';
 
-const App = () => {
+const Pages = () => {
   useLocation();
   let routes = useRoutes([
     { path: '/', element: <Home /> },
@@ -47,7 +47,7 @@ class Root extends React.Component {
         </Navbar>
         <Container>
           <Row className="mt-4">
-            <App />
+            <Pages />
           </Row>
         </Container>
       </BrowserRouter>

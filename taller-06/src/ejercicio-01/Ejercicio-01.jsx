@@ -83,9 +83,9 @@ class Ejercicio01 extends React.Component {
             className="input"
           />
         </Row>
-        <Row>
+        <div className="row">
           <p className="my-4 text-center text-warning">{this.state.mensajeIntento}</p>
-        </Row>
+        </div>
         <Row>
           <Button disabled={!this.state.buttonEnable} onClick={this.handleClick}>
             Seleccionar
