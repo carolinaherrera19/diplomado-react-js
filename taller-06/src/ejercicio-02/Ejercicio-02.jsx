@@ -10,8 +10,11 @@ class Ejercicio02 extends React.Component {
   recetas = [
     {
       id: 1,
-      nombre: 'PIERNA DE CERDO ADOBADA CON NARANJA'.toLowerCase(),
+      nombre: 'PIERNA DE CERDO ADOBADA CON NARANJA',
       imagen: 'https://cdn7.kiwilimon.com/recetaimagen/37387/47135.jpg',
+      descripcion: [
+        'Comer adobos en Navidad es muy común, pero con esta pierna de cerdo adobada tendrás una nueva preparación fácil y picosita que te encantará, con el sabor de naranja que sólo Kikkoman® proporciona. Prepara esta receta de pierna adobada y disfruta de un platillo lleno de sabor, de un paso a paso completo y sencillo, y acompáñala con una guarnición sencilla de verduras rostizadas y puré de papa.'
+      ],
       ingredientes: [
         '1/4 cebollas',
         '2 dientes de ajo',
@@ -32,8 +35,11 @@ class Ejercicio02 extends React.Component {
     },
     {
       id: 2,
-      nombre: 'PASTA FRÍA CON PIÑA Y MANZANA'.toLowerCase(),
+      nombre: 'PASTA FRÍA CON PIÑA Y MANZANA',
       imagen: 'https://cdn7.kiwilimon.com/recetaimagen/37512/47388.jpg',
+      descripcion: [
+        'Para esta Navidad te proponemos la receta de esta rica pasta fría con frutas frescas, una gran opción ya que tiene lo rico de la fruta fresca combinado con la deliciosa Mayonesa Balance McCORMICK® con aceite de aguacate.'
+      ],
       ingredientes: [
         '2 tazas de pasta de coditos, cocida',
         '1 taza de uva',
@@ -52,6 +58,9 @@ class Ejercicio02 extends React.Component {
       id: 2,
       nombre: 'PORK BELLY GLASEADO CON MANZANA',
       imagen: 'https://cdn7.kiwilimon.com/recetaimagen/37459/47305.jpg',
+      descripcion: [
+        'El pork belly es un corte perfecto para hornear, pues suelta mucho jugo a la hora de la cocción. Prueba este platillo con sabores agridulces gracias a la salsa Kikkoman®, que combinada con manzana tendrá un sabor único que te encantará.'
+      ],
       ingredientes: [
         '3 manzanas amarillas, sin piel ni corazón, cortadas en medias lunas',
         'suficiente de agua, para las manzanas',
@@ -78,6 +87,10 @@ class Ejercicio02 extends React.Component {
             <Card.Img variant="top" src={receta.imagen} />
             <Card.Body>
               <Card.Title>{receta.nombre}</Card.Title>
+              <h5>
+                <Card.Text>Descripcion:</Card.Text>
+              </h5>
+              <Card.Text>{receta.descripcion}</Card.Text>
               <h5>
                 <Card.Text>Ingredientes:</Card.Text>
               </h5>
