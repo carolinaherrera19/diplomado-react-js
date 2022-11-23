@@ -24,7 +24,6 @@ class Juego extends React.Component {
     this.setState((previousValue) => ({
       intentos: previousValue.intentos + 1
     }));
-    console.log({ numeroIncognito: this.numeroIncognito });
     const numeroNuevo = +this.inputRef.current.value;
     if (numeroNuevo === this.numeroIncognito) {
       MySwal.fire({
