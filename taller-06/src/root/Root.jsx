@@ -5,17 +5,24 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { BrowserRouter, useLocation, useRoutes, NavLink } from 'react-router-dom';
 import Home from '../home/Home';
-import Ejercicio01 from '../ejercicio-01/ejercicio-01';
-import Ejercicio02 from '../ejercicio-02/Ejercicio-02';
-import Ejercicio03 from '../ejercicio-03/Ejercicio-03';
+import Juego from '../juego/juego';
+import Recetas from '../recetas/recetas';
+import Canciones from '../canciones/canciones';
+import CancionDetalle from '../componentes/cancion-detalle';
 
 const Pages = () => {
   useLocation();
   let routes = useRoutes([
     { path: '/', element: <Home /> },
-    { path: 'ejercicio-01', element: <Ejercicio01 /> },
-    { path: 'ejercicio-02', element: <Ejercicio02 /> },
-    { path: 'ejercicio-03', element: <Ejercicio03 /> }
+    { path: 'juegos', element: <Juego /> },
+    { path: 'recetas', element: <Recetas /> },
+    {
+      path: 'canciones',
+      children: [
+        { path: '', element: <Canciones /> },
+        { path: ':cancionId', element: <CancionDetalle /> }
+      ]
+    }
   ]);
   return routes;
 };
@@ -32,14 +39,14 @@ class Root extends React.Component {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <NavLink className="nav-link" to="/ejercicio-01">
-                  Ejercicio 01
+                <NavLink className="nav-link" to="/juegos">
+                  Juegos
                 </NavLink>
-                <NavLink className="nav-link" to="/ejercicio-02">
-                  Ejercicio 02
+                <NavLink className="nav-link" to="/recetas">
+                  Recetas
                 </NavLink>
-                <NavLink className="nav-link" to="/ejercicio-03">
-                  Ejercicio 03
+                <NavLink className="nav-link" to="/canciones">
+                  Canciones
                 </NavLink>
               </Nav>
             </Navbar.Collapse>

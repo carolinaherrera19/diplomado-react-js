@@ -1,15 +1,15 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import Recetas from '../data/recetas.json';
+import RecetasJSON from '../data/recetas.json';
 
 function ListaIngredientes(props) {
   return props.ingredientes.map((ingrediente, index) => <li key={index}>{ingrediente}</li>);
 }
 
-class Ejercicio02 extends React.Component {
+class Recetas extends React.Component {
   render() {
-    return Recetas.map((receta) => {
+    return RecetasJSON.map((receta) => {
       return (
         <Col key={receta.id}>
           <Card>
@@ -32,4 +32,4 @@ class Ejercicio02 extends React.Component {
   }
 }
 
-export default Ejercicio02;
+export default Recetas;

@@ -4,11 +4,11 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
-import './ejercicio-01.scss';
+import './juego.scss';
 
 const MySwal = withReactContent(Swal);
 
-class Ejercicio01 extends React.Component {
+class Juego extends React.Component {
   numeroIncognito = 0;
   constructor(props) {
     super(props);
@@ -96,4 +96,4 @@ class Ejercicio01 extends React.Component {
   }
 }
 
-export default Ejercicio01;
+export default Juego;
