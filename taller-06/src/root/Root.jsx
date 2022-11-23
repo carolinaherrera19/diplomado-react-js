@@ -4,10 +4,10 @@ import Row from 'react-bootstrap/Row';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { BrowserRouter, useLocation, useRoutes, NavLink } from 'react-router-dom';
-import Home from '../home/Home';
-import Juego from '../juego/juego';
-import Recetas from '../recetas/recetas';
-import Canciones from '../canciones/canciones';
+import Home from '../pages/home/Home';
+import Juego from '../pages/juego/juego';
+import Recetas from '../pages/recetas/recetas';
+import Canciones from '../pages/canciones/canciones';
 import CancionDetalle from '../componentes/cancion-detalle';
 
 const Pages = () => {

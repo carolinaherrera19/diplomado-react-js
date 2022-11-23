@@ -1,6 +1,6 @@
 import './Home.scss';
 import Col from 'react-bootstrap/Col';
-import CardCustom from '../componentes/card-custom';
+import CardCustom from '../../componentes/card-custom';
 
 function Home() {
   return (
@@ -10,7 +10,7 @@ function Home() {
           title="Ejericio 01"
           text="Adivina el numero"
           textButton="Jugar"
-          path="/ejercicio-01"
+          path="/juegos"
           urlImage="https://m.media-amazon.com/images/I/51MSRaazr5L.png"></CardCustom>
       </Col>
       <Col sm="4">
@@ -18,7 +18,7 @@ function Home() {
           title="Ejericio 02"
           text="Recetas Navidenas"
           textButton="Ver..."
-          path="/ejercicio-02"
+          path="/recetas"
           urlImage="https://files.rcnradio.com/styles/imagen_full/public/2021-12/natilla_0.jpg.webp?VersionId=XgUyXqPSwZbLB6ZGjoPF.CfDbBC34xpM&itok=y5hj2TUH"></CardCustom>
       </Col>
       <Col sm="4">
@@ -26,7 +26,7 @@ function Home() {
           title="Ejericio 03"
           text="Canciones Navidenas"
           textButton="Ver.."
-          path="/ejercicio-03"
+          path="/canciones"
           urlImage="https://i.musicaimg.com/playlists/canciones-navidenas.jpg"></CardCustom>
       </Col>
     </>

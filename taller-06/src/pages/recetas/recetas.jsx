@@ -1,7 +1,7 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import RecetasJSON from '../data/recetas.json';
+import RecetasJSON from '../../data/recetas.json';
 
 function ListaIngredientes(props) {
   return props.ingredientes.map((ingrediente, index) => <li key={index}>{ingrediente}</li>);

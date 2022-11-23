@@ -1,8 +1,8 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
-import CancionesJSON from '../data/canciones.json';
-import ItemCancion from '../componentes/item-cancion';
+import CancionesJSON from '../../data/canciones.json';
+import ItemCancion from '../../componentes/item-cancion';
 
 class Canciones extends React.Component {
   render() {
