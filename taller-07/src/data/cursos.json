@@ -1,0 +1,80 @@
+[
+  {
+    "titulo": "fundamentos de musica",
+    "slug": "fundamentos-de-musica",
+    "imagen": "fundamentos_musica.jpg",
+    "videos": [
+      {
+        "titulo": "introduccion",
+        "video": "https://www.youtube.com/watch?v=3m2k16uKbwM",
+        "descripcion": "en esta clase aprenderas conseptos basicos de musica."
+      },
+      {
+        "titulo": "Ritmo, Melodía y Armonía",
+        "video": "https://www.youtube.com/watch?v=VgALuTc-j8U",
+        "descripcion": "En este video te cuento como funciona la música, te explico a detalle los conceptos de melodía, armonía y ritmo (conceptos básicos de fl studio), con ayuda del programa de producción musical fl estudio."
+      }
+    ]
+  },
+  {
+    "titulo": "Tecnica Vocal",
+    "slug": "tecnica-vocal",
+    "imagen": "img_tecnica_vocal.jpg",
+    "videos": [
+      {
+        "titulo": "Técnica Vocal - Ejercicios para Afinar la Voz - Mejora Tu Voz",
+        "video": "https://www.youtube.com/watch?v=G2vDNamPNoc",
+        "descripcion": "Descubre cómo cantar mejor controlando la afinación de la voz. Afinar la voz significa cantar en el tono adecuado. A veces tenemos dificultad porque no nos damos cuenta de nuestros errores. Estos ejercicios te ayudarán a controlar tu afinación de manera sencilla y progresiva.."
+      },
+      {
+        "titulo": "Clases de canto 1 | Como cantar Bien ",
+        "video": "https://www.youtube.com/watch?v=UVUwP8AqD1",
+        "descripcion": "una clase de canto corta con el propósito de trabajar"
+      },
+      {
+        "titulo": "Como cantar Raspado",
+        "video": "https://www.youtube.com/watch?v=0DM9yUq4Pjk",
+        "descripcion": "Como Raspar la voz al cantar | Rasgado Clases de Canto Gutural"
+      }
+    ]
+  },
+  {
+    "titulo": "Tocar Guitarra",
+    "slug": "tocar-guitarra",
+    "imagen": "aprende_guitarra.jpg",
+    "videos": [
+      {
+        "titulo": "¡Aprende como tocar guitarra en solo 20 minutos! El mejor tutorial para principiantes",
+        "video": "https://www.youtube.com/watch?v=S_QIaGgLJ-0",
+        "descripcion": "El mejor tutorial con el mejor profesor para aprender a tocar guitarra desde cero en solo 20  minutos. "
+      },
+      {
+        "titulo": "Como tocar guitarra fácil! Aprende 8 acordes básicos en 10 minutos!",
+        "video": "https://www.youtube.com/watch?v=kdHMt6H4kDc",
+        "descripcion": "Como tocar guitarra fácil! Aprende 8 acordes básicos en 10 minutos!"
+      }
+    ]
+  },
+  {
+    "titulo": "Tocar piano",
+    "slug": "tocar-piano",
+    "imagen": "piano_facil.jpg",
+    "videos": [
+      {
+        "titulo": "Como Tocar El Piano / Fàcil y Ràpido / Para Principiantes",
+        "video": "https://www.youtube.com/watch?v=jaDOE_cYxSQ",
+        "descripcion": "Piano facil y divertidas"
+      },
+      {
+        "titulo": "partiduras",
+        "video": "https://www.youtube.com/watch?v=UX55giqXlZY",
+        "descripcion": "pantera rosa"
+      },
+      {
+        "titulo": "COMO TOCAR navidad",
+        "video": "https://www.youtube.com/watch?v=eJELRZrrLSk",
+        "descripcion": "musida de navidad"
+      }
+    ]
+  }
+]
