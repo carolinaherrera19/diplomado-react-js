@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/diplomado-react-js/static/css/main.af948a0c.css",
+    "main.js": "/diplomado-react-js/static/js/main.86803329.js",
+    "static/js/787.bc96adc0.chunk.js": "/diplomado-react-js/static/js/787.bc96adc0.chunk.js",
+    "index.html": "/diplomado-react-js/index.html",
+    "main.af948a0c.css.map": "/diplomado-react-js/static/css/main.af948a0c.css.map",
+    "main.86803329.js.map": "/diplomado-react-js/static/js/main.86803329.js.map",
+    "787.bc96adc0.chunk.js.map": "/diplomado-react-js/static/js/787.bc96adc0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af948a0c.css",
+    "static/js/main.86803329.js"
+  ]
+}
